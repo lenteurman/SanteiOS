@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8435AC261EFBAB4B005C38CC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8435AC251EFBAB4B005C38CC /* CoreData.framework */; };
+		8435AC291EFBABA4005C38CC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8435AC271EFBABA4005C38CC /* Model.xcdatamodeld */; };
+		844723CC1EFAA75400DF8D5D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844723CA1EFAA75400DF8D5D /* EditViewController.swift */; };
+		844723CD1EFAA75400DF8D5D /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844723CB1EFAA75400DF8D5D /* EditViewController.xib */; };
+		844723CF1EFABC1500DF8D5D /* names.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844723CE1EFABC1500DF8D5D /* names.plist */; };
 		8458940D1EF94A5900DA8981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458940C1EF94A5900DA8981 /* AppDelegate.swift */; };
-		8458940F1EF94A5900DA8981 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458940E1EF94A5900DA8981 /* ViewController.swift */; };
 		845894121EF94A5900DA8981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845894101EF94A5900DA8981 /* Main.storyboard */; };
 		845894141EF94A5900DA8981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845894131EF94A5900DA8981 /* Assets.xcassets */; };
 		845894171EF94A5900DA8981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845894151EF94A5900DA8981 /* LaunchScreen.storyboard */; };
 		845894221EF94A5900DA8981 /* SanteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845894211EF94A5900DA8981 /* SanteTests.swift */; };
 		8458942D1EF94A5900DA8981 /* SanteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458942C1EF94A5900DA8981 /* SanteUITests.swift */; };
+		8458943D1EF94F6000DA8981 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458943C1EF94F6000DA8981 /* PatientTableViewController.swift */; };
+		845894401EF952ED00DA8981 /* CreatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458943E1EF952ED00DA8981 /* CreatePatientViewController.swift */; };
+		845894411EF952ED00DA8981 /* CreatePatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8458943F1EF952ED00DA8981 /* CreatePatientViewController.xib */; };
+		845894461EF955DB00DA8981 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845894451EF955DB00DA8981 /* Patient.swift */; };
+		845894481EF967E500DA8981 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845894471EF967E500DA8981 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8435AC251EFBAB4B005C38CC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8435AC281EFBABA4005C38CC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		844723CA1EFAA75400DF8D5D /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		844723CB1EFAA75400DF8D5D /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		844723CE1EFABC1500DF8D5D /* names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = names.plist; path = ../names.plist; sourceTree = "<group>"; };
 		845894091EF94A5900DA8981 /* Sante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8458940C1EF94A5900DA8981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8458940E1EF94A5900DA8981 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		845894111EF94A5900DA8981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845894131EF94A5900DA8981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845894161EF94A5900DA8981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +60,11 @@
 		845894281EF94A5900DA8981 /* SanteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8458942C1EF94A5900DA8981 /* SanteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanteUITests.swift; sourceTree = "<group>"; };
 		8458942E1EF94A5900DA8981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8458943C1EF94F6000DA8981 /* PatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
+		8458943E1EF952ED00DA8981 /* CreatePatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePatientViewController.swift; sourceTree = "<group>"; };
+		8458943F1EF952ED00DA8981 /* CreatePatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePatientViewController.xib; sourceTree = "<group>"; };
+		845894451EF955DB00DA8981 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		845894471EF967E500DA8981 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8435AC261EFBAB4B005C38CC /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8435AC241EFBAB4B005C38CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8435AC251EFBAB4B005C38CC /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		845894001EF94A5900DA8981 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,7 @@
 				845894201EF94A5900DA8981 /* SanteTests */,
 				8458942B1EF94A5900DA8981 /* SanteUITests */,
 				8458940A1EF94A5900DA8981 /* Products */,
+				8435AC241EFBAB4B005C38CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +125,19 @@
 		8458940B1EF94A5900DA8981 /* Sante */ = {
 			isa = PBXGroup;
 			children = (
+				845894441EF9558B00DA8981 /* Data */,
 				8458940C1EF94A5900DA8981 /* AppDelegate.swift */,
-				8458940E1EF94A5900DA8981 /* ViewController.swift */,
 				845894101EF94A5900DA8981 /* Main.storyboard */,
 				845894131EF94A5900DA8981 /* Assets.xcassets */,
 				845894151EF94A5900DA8981 /* LaunchScreen.storyboard */,
 				845894181EF94A5900DA8981 /* Info.plist */,
+				8458943C1EF94F6000DA8981 /* PatientTableViewController.swift */,
+				8458943E1EF952ED00DA8981 /* CreatePatientViewController.swift */,
+				8458943F1EF952ED00DA8981 /* CreatePatientViewController.xib */,
+				845894471EF967E500DA8981 /* DetailViewController.swift */,
+				844723CA1EFAA75400DF8D5D /* EditViewController.swift */,
+				844723CB1EFAA75400DF8D5D /* EditViewController.xib */,
+				844723CE1EFABC1500DF8D5D /* names.plist */,
 			);
 			path = Sante;
 			sourceTree = "<group>";
@@ -123,6 +158,15 @@
 				8458942E1EF94A5900DA8981 /* Info.plist */,
 			);
 			path = SanteUITests;
+			sourceTree = "<group>";
+		};
+		845894441EF9558B00DA8981 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				845894451EF955DB00DA8981 /* Patient.swift */,
+				8435AC271EFBABA4005C38CC /* Model.xcdatamodeld */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845894411EF952ED00DA8981 /* CreatePatientViewController.xib in Resources */,
+				844723CF1EFABC1500DF8D5D /* names.plist in Resources */,
 				845894171EF94A5900DA8981 /* LaunchScreen.storyboard in Resources */,
+				844723CD1EFAA75400DF8D5D /* EditViewController.xib in Resources */,
 				845894141EF94A5900DA8981 /* Assets.xcassets in Resources */,
 				845894121EF94A5900DA8981 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8458940F1EF94A5900DA8981 /* ViewController.swift in Sources */,
+				8458943D1EF94F6000DA8981 /* PatientTableViewController.swift in Sources */,
+				845894461EF955DB00DA8981 /* Patient.swift in Sources */,
+				844723CC1EFAA75400DF8D5D /* EditViewController.swift in Sources */,
+				8435AC291EFBABA4005C38CC /* Model.xcdatamodeld in Sources */,
+				845894481EF967E500DA8981 /* DetailViewController.swift in Sources */,
 				8458940D1EF94A5900DA8981 /* AppDelegate.swift in Sources */,
+				845894401EF952ED00DA8981 /* CreatePatientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +557,7 @@
 				845894331EF94A5900DA8981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845894341EF94A5900DA8981 /* Build configuration list for PBXNativeTarget "SanteTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +566,7 @@
 				845894361EF94A5900DA8981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845894371EF94A5900DA8981 /* Build configuration list for PBXNativeTarget "SanteUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,8 +575,22 @@
 				845894391EF94A5900DA8981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8435AC271EFBABA4005C38CC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8435AC281EFBABA4005C38CC /* Model.xcdatamodel */,
+			);
+			currentVersion = 8435AC281EFBABA4005C38CC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 845894011EF94A5900DA8981 /* Project object */;
 }

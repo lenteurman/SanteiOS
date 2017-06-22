@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePatientViewController" customModule="Sante" customModuleProvider="target">
+            <connections>
+                <outlet property="Save" destination="kbE-hD-eS4" id="qD7-nb-Mmz"/>
+                <outlet property="female" destination="aIO-xu-8nf" id="aYh-0h-aEA"/>
+                <outlet property="firstName" destination="Nfm-hq-kuK" id="a6D-6x-faw"/>
+                <outlet property="form" destination="fZb-RN-K3R" id="Dks-fC-SHm"/>
+                <outlet property="lastName" destination="Yte-9Q-lUW" id="BeC-EL-Xrv"/>
+                <outlet property="male" destination="cUW-mL-zU3" id="7J1-83-2fm"/>
+                <outlet property="progressBar" destination="5Ck-hW-bod" id="8Va-Ve-kIq"/>
+                <outlet property="switchbutton" destination="fUC-IU-fpZ" id="co4-p0-9dJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-RN-K3R">
+                    <rect key="frame" x="126" y="117" width="68" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gIK-A7-RNQ">
+                    <rect key="frame" x="10" y="234" width="300" height="100"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-9Q-lUW">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XRV-zC-VzC"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-hq-kuK">
+                            <rect key="frame" x="0.0" y="60" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cX7-Pe-GE2"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbE-hD-eS4">
+                    <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iku-mT-A9Y"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveAndBack:" destination="-1" eventType="touchUpInside" id="p9X-lu-MIZ"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xzO-dW-MhA">
+                    <rect key="frame" x="49.5" y="374" width="221.5" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-mL-zU3">
+                            <rect key="frame" x="0.0" y="0.0" width="37" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUC-IU-fpZ">
+                            <rect key="frame" x="77" y="0.0" width="51" height="40"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-xu-8nf">
+                            <rect key="frame" x="166" y="0.0" width="55.5" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="MX9-fB-U2i"/>
+                    </constraints>
+                </stackView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-hW-bod">
+                    <rect key="frame" x="50" y="444" width="220" height="2"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="5Ck-hW-bod" firstAttribute="top" secondItem="xzO-dW-MhA" secondAttribute="bottom" constant="30" id="4k0-Q1-Pgv"/>
+                <constraint firstAttribute="trailing" secondItem="gIK-A7-RNQ" secondAttribute="trailing" constant="10" id="4yc-Sx-7fW"/>
+                <constraint firstItem="xzO-dW-MhA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Y8-PY-SP1"/>
+                <constraint firstItem="5Ck-hW-bod" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="9wQ-YQ-G55"/>
+                <constraint firstItem="gIK-A7-RNQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IKS-Ym-kG0"/>
+                <constraint firstAttribute="trailing" secondItem="5Ck-hW-bod" secondAttribute="trailing" constant="50" id="JdL-eH-wRC"/>
+                <constraint firstItem="5Ck-hW-bod" firstAttribute="top" secondItem="xzO-dW-MhA" secondAttribute="bottom" constant="30" id="LHY-EM-VxQ"/>
+                <constraint firstAttribute="bottom" secondItem="kbE-hD-eS4" secondAttribute="bottom" id="MVF-RR-WQ9"/>
+                <constraint firstItem="gIK-A7-RNQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="VJC-lP-WH5"/>
+                <constraint firstAttribute="trailing" secondItem="kbE-hD-eS4" secondAttribute="trailing" id="amr-L8-CpN"/>
+                <constraint firstItem="kbE-hD-eS4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="asT-Yg-2Aw"/>
+                <constraint firstAttribute="trailing" secondItem="xzO-dW-MhA" secondAttribute="trailing" constant="10" id="cbK-EG-njX"/>
+                <constraint firstItem="xzO-dW-MhA" firstAttribute="top" secondItem="gIK-A7-RNQ" secondAttribute="bottom" constant="40" id="gxq-lr-Sja"/>
+                <constraint firstItem="gIK-A7-RNQ" firstAttribute="top" secondItem="xzO-dW-MhA" secondAttribute="bottom" constant="20" id="irr-p6-LUd"/>
+                <constraint firstItem="kbE-hD-eS4" firstAttribute="top" secondItem="gIK-A7-RNQ" secondAttribute="bottom" constant="20" id="sfX-PV-BH2"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IKS-Ym-kG0"/>
+                    <exclude reference="irr-p6-LUd"/>
+                    <exclude reference="9Y8-PY-SP1"/>
+                    <exclude reference="cbK-EG-njX"/>
+                    <exclude reference="gxq-lr-Sja"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="irr-p6-LUd"/>
+                    <include reference="cbK-EG-njX"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="IKS-Ym-kG0"/>
+                    <include reference="9Y8-PY-SP1"/>
+                    <include reference="gxq-lr-Sja"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="sfX-PV-BH2"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-112" y="47"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="Sante" customModuleProvider="target">
+            <connections>
+                <outlet property="preferenceSystem" destination="Pfd-ME-S6v" id="jin-yR-rCM"/>
+                <outlet property="saveButton" destination="p1N-Ie-TX3" id="QmM-iW-EOV"/>
+                <outlet property="segmentedFirst" destination="JTg-PV-cQn" id="nVM-kT-PUw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whatFirst" destination="Gcr-DH-i1c" id="8kk-Z3-Osc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="y5X-do-NUM">
+                    <rect key="frame" x="10" y="130.5" width="300" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position of Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-DH-i1c">
+                            <rect key="frame" x="0.0" y="0.0" width="130.5" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-PV-cQn">
+                            <rect key="frame" x="179" y="0.0" width="121" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="121" id="9SO-a1-3nD"/>
+                            </constraints>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1N-Ie-TX3">
+                    <rect key="frame" x="133" y="498" width="54" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BTq-pJ-gHO"/>
+                        <constraint firstAttribute="width" constant="54" id="tBB-Uc-D6K"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="gMT-Q4-9ZC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preference Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-ME-S6v">
+                    <rect key="frame" x="84.5" y="50" width="151" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="p1N-Ie-TX3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GsQ-ib-88G"/>
+                <constraint firstItem="y5X-do-NUM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="QAj-C3-5JA"/>
+                <constraint firstAttribute="trailing" secondItem="y5X-do-NUM" secondAttribute="trailing" constant="10" id="REu-hH-17m"/>
+                <constraint firstItem="Pfd-ME-S6v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="SzA-J4-ZRC"/>
+                <constraint firstAttribute="bottom" secondItem="p1N-Ie-TX3" secondAttribute="bottom" constant="30" id="bhx-Fp-AAh"/>
+                <constraint firstItem="y5X-do-NUM" firstAttribute="top" secondItem="Pfd-ME-S6v" secondAttribute="bottom" constant="60" id="e7p-Ea-cS7"/>
+                <constraint firstItem="Pfd-ME-S6v" firstAttribute="centerX" secondItem="y5X-do-NUM" secondAttribute="centerX" id="zLw-OB-5dk"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
