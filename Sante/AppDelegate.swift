@@ -13,19 +13,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    // a changer en static
+    // adress IP static, care for updates !
     let apiPersonUrl = "http://10.1.0.100:3000/persons"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         importData()
-        print("tst")
         refreshFromServer()
         
-        //print(persistentContainer.name) // On vire aussi le lazy
         return true
     }
     
+    //fonction de refresh
     func refreshFromServer() {
         let url = URL(string: apiPersonUrl)!
         
@@ -47,9 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         task.resume()
     }
     
+    //Comment on récupère les données
     func updateFromJsonData(json: [[String: Any]]) {
-        //Supprimer
         
+        //Supprimer
         let fetchRequest = NSFetchRequest<PatientData> (entityName: "PatientData")
         
         let patients = try! persistentContainer.viewContext.fetch(fetchRequest)
@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         try! persistentContainer.viewContext.save()
+        
         //Lire
         for dict in json {
             if let dictionnary = dict as? [String:Any] {
@@ -81,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    //Comment on rajoute les données
     func importData() {
         //Check if import as been done , if UserDefault got key dataImported
         // if false importData and got dataImported true
@@ -108,7 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     patientData.pictureUrl = pictureUrl
                 }
             }
-            
             
             UserDefaults.standard.setValue(true, forKey: "isDataImported")
             

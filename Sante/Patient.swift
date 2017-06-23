@@ -30,23 +30,4 @@ class Patient {
         self.forename = forename
         self.gender = gender
     }
-    
-    /*func getName() -> String{
-        if UserDefaults.standard.value(forKey: "isNameFirst") != nil {
-            if gender == "Male" {
-                return "Mister " + self.name + " " + self.forename
-            }
-            else {
-                return "Miss " + self.name + " " + self.forename
-            }
-        }
-        else {
-            if gender == "Male" {
-                return "Mister " + self.forename + " " + self.name
-            }
-            else {
-                return "Miss " + self.forename + " " + self.name
-            }
-        }
-    }*/
 }

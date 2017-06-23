@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePatientViewController" customModule="Sante" customModuleProvider="target">
             <connections>
-                <outlet property="Save" destination="kbE-hD-eS4" id="qD7-nb-Mmz"/>
-                <outlet property="female" destination="aIO-xu-8nf" id="aYh-0h-aEA"/>
+                <outlet property="femaleLabel" destination="aIO-xu-8nf" id="mw4-sr-Jrx"/>
                 <outlet property="firstName" destination="Nfm-hq-kuK" id="a6D-6x-faw"/>
-                <outlet property="form" destination="fZb-RN-K3R" id="Dks-fC-SHm"/>
+                <outlet property="formLabel" destination="fZb-RN-K3R" id="zf1-dQ-bFi"/>
+                <outlet property="genderSwitch" destination="fUC-IU-fpZ" id="QGe-Bf-Lty"/>
                 <outlet property="lastName" destination="Yte-9Q-lUW" id="BeC-EL-Xrv"/>
-                <outlet property="male" destination="cUW-mL-zU3" id="7J1-83-2fm"/>
+                <outlet property="maleLabel" destination="cUW-mL-zU3" id="gNT-td-4qM"/>
                 <outlet property="progressBar" destination="5Ck-hW-bod" id="8Va-Ve-kIq"/>
-                <outlet property="switchbutton" destination="fUC-IU-fpZ" id="co4-p0-9dJ"/>
+                <outlet property="saveButton" destination="kbE-hD-eS4" id="sd1-h3-ttX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

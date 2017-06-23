@@ -27,35 +27,6 @@ class PatientTableViewController: UITableViewController {
         fetchedResultController.delegate = self
         try! fetchedResultController.performFetch()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        
-        //let truc = Patient(name: "TOTO", forename: "Titi", gender: "male")
-        //let bidule = Patient(name: "TATA", forename: "Tutu", gender: "female")
-        
-        
-        /*let johnData = PatientData(entity: PatientData.entity(), insertInto: persistentContainer.viewContext)
-         johnData.forename = "John"
-         johnData.name = "Doe"
-         
-         do {
-         try persistentContainer.viewContext.save()
-         } catch {
-         print(error)
-         }
-         */
-        
-        
-        //patients.append(johnData)
-        
-        //patients.append(truc)
-        //patients.append(bidule)
-        
-        
         
         let buttonAdd = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showCreateViewController))
         self.navigationItem.rightBarButtonItem = buttonAdd
@@ -63,26 +34,6 @@ class PatientTableViewController: UITableViewController {
         let buttonEdit = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(showEditViewController))
         self.navigationItem.leftBarButtonItem = buttonEdit
         
-        
-        
-        /*let fileUrl = Bundle.main.url(forResource: "names", withExtension: "plist")
-         guard let url = fileUrl, let array = NSArray(contentsOfFile: url.path) else {
-         return
-         }
-         
-         for dict in array {
-         if let dictionnary = dict as? [String:Any] {
-         let firstName = dictionnary["name"] as? String ?? "Error"
-         let lastName = dictionnary["lastname"] as? String ?? "Error"
-         
-         if let Gender = dictionnary["Gender"] as? String, Gender == "Male" {
-         self.patients.append(Patient(name: firstName, forename: lastName, gender: "Male"))
-         }
-         else {
-         self.patients.append(Patient(name: firstName, forename: lastName, gender: "Male"))
-         }
-         }
-         }*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -154,7 +105,7 @@ class PatientTableViewController: UITableViewController {
                 return
             }
             
-            //Supp un Patient
+            //Supp un Patient en local
             detailController.methodDelete = {
                 let patient = self.fetchedResultController.object(at:selectedIndexPath)
                 self.persistentContainer.viewContext.delete(patient)
@@ -173,51 +124,6 @@ class PatientTableViewController: UITableViewController {
             detailController.patient = fetchedResultController.object(at:selectedIndexPath)
         }
     }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 

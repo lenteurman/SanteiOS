@@ -12,9 +12,11 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var forename: UILabel!
     @IBOutlet weak var name: UILabel!
-    // Ajouter notre label pour le genre et faire les contraintes
+    @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var avatar: UIImageView!
     var patient: PatientData!
+    
+    let apiPersonUrl = "http://10.1.0.100:3000/persons"
     
     var methodDelete: (() -> ())?
     
@@ -29,12 +31,12 @@ class DetailViewController: UIViewController {
         self.title = patient.getName()
         self.name.text = patient.name
         self.forename.text = patient.forename
-        //self.gender.text = patient.gender
-        //self.avatar.image = #imageLiteral(resourceName: "Teemo")
-        avatar.image = UIImage(named: "")
+        self.gender.text = patient.gender
+        self.avatar.image = UIImage(named: "")
         
         var urlRequest = URLRequest(url: URL(string: patient.pictureUrl!)!)
         urlRequest.httpMethod = "GET"
+        
         
         //Pas besoin de le laisser dans un autre QoS
         let task = URLSession.shared.dataTask(with: urlRequest) {
@@ -55,8 +57,15 @@ class DetailViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = buttonDel
         
     }
+    
     func backTableViewController() {
+        let idPersonnUrl: String = apiPersonUrl + "/" + String(patient.serverID)
+        var urlRequest2 = URLRequest(url: URL(string: idPersonnUrl)!)
+        urlRequest2.httpMethod = "DELETE"
         
+        let task2 = URLSession.shared.dataTask(with: urlRequest2)
+        
+        task2.resume()
         self.methodDelete?()
         // revenir en arriere
         self.navigationController?.popViewController(animated: true)
