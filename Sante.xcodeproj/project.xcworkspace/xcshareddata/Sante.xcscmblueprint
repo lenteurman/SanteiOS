@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B1A513A681200B1053EEFB1293EB97B60FDDF967",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93DDA775938F85FE932CF15CF2E1B87A84971867" : 9223372036854775807,
+    "B1A513A681200B1053EEFB1293EB97B60FDDF967" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B4848AE6-8EEA-43F1-B6A9-3BF37A5DB7C2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93DDA775938F85FE932CF15CF2E1B87A84971867" : "",
+    "B1A513A681200B1053EEFB1293EB97B60FDDF967" : "Sante\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sante",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sante.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lenteurman\/SanteiOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93DDA775938F85FE932CF15CF2E1B87A84971867"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lenteurman\/SanteiOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1A513A681200B1053EEFB1293EB97B60FDDF967"
+    }
+  ]
+}

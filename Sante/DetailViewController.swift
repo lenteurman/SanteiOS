@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var forename: UILabel!
     @IBOutlet weak var name: UILabel!
     // Ajouter notre label pour le genre et faire les contraintes
@@ -20,11 +20,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         /*let button = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(showCreateViewController))
-        self.navigationItem.rightBarButtonItem = button
-        */
+         self.navigationItem.rightBarButtonItem = button
+         */
         
         self.title = patient.getName()
         self.name.text = patient.name
@@ -61,21 +61,21 @@ class DetailViewController: UIViewController {
         // revenir en arriere
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

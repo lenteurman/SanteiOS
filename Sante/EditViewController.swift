@@ -9,26 +9,26 @@
 import UIKit
 
 class EditViewController: UIViewController {
-
+    
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var preferenceSystem: UILabel!
     @IBOutlet weak var whatFirst: UILabel!
     @IBOutlet weak var segmentedFirst: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         preferenceSystem.text = "Preference System"
         whatFirst.text = "Position of Name"
-    
+        
         guard let isNameFirst = UserDefaults.standard.value(forKey: "isNameFirst") as? Int else {
             segmentedFirst.selectedSegmentIndex = 1
             return
         }
         segmentedFirst.selectedSegmentIndex = isNameFirst
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,13 +43,13 @@ class EditViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
